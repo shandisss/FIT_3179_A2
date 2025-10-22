@@ -1,0 +1,141 @@
+dataset,commodity,unit_source,is_total,year,measure_type,value,unit
+MALAY_IMPORT,"Beef (fresh, frozen & processed)",M. Tonnes,FALSE,2015,quantity,9319.2,tonnes
+MALAY_IMPORT,"Beef (fresh, frozen & processed)",M. Tonnes,FALSE,2015,value_cif,124.26,million_rm
+MALAY_IMPORT,Buffaloes for breeding,No,FALSE,2015,quantity,38,head
+MALAY_IMPORT,Buffaloes for breeding,No,FALSE,2015,value_cif,0.06,million_rm
+MALAY_IMPORT,Buffaloes for slaughter,No,FALSE,2015,quantity,166,head
+MALAY_IMPORT,Buffaloes for slaughter,No,FALSE,2015,value_cif,0.16,million_rm
+MALAY_IMPORT,Cattle for breeding,No,FALSE,2015,quantity,90,head
+MALAY_IMPORT,Cattle for breeding,No,FALSE,2015,value_cif,0.05,million_rm
+MALAY_IMPORT,Cattle for slaughter,No,FALSE,2015,quantity,,head
+MALAY_IMPORT,Cattle for slaughter,No,FALSE,2015,value_cif,,million_rm
+MALAY_IMPORT,Day old chicks & ducklings,No,FALSE,2015,quantity,4319625,head
+MALAY_IMPORT,Day old chicks & ducklings,No,FALSE,2015,value_cif,17.69,million_rm
+MALAY_IMPORT,Fowl and Poultry,No,FALSE,2015,quantity,46188547,head
+MALAY_IMPORT,Fowl and Poultry,No,FALSE,2015,value_cif,548.2,million_rm
+MALAY_IMPORT,Live Ducks,No,FALSE,2015,quantity,5622606,head
+MALAY_IMPORT,Live Ducks,No,FALSE,2015,value_cif,138.8,million_rm
+MALAY_IMPORT,Live goats,No,FALSE,2015,quantity,35,head
+MALAY_IMPORT,Live goats,No,FALSE,2015,value_cif,0.02,million_rm
+MALAY_IMPORT,Live sheep,No,FALSE,2015,quantity,,head
+MALAY_IMPORT,Live sheep,No,FALSE,2015,value_cif,,million_rm
+MALAY_IMPORT,Live swine,No,FALSE,2015,quantity,,head
+MALAY_IMPORT,Live swine,No,FALSE,2015,value_cif,,million_rm
+MALAY_IMPORT,"Mutton (fresh, frozen & processed)",M. Tonnes,FALSE,2015,quantity,60.8,tonnes
+MALAY_IMPORT,"Mutton (fresh, frozen & processed)",M. Tonnes,FALSE,2015,value_cif,0.67,million_rm
+MALAY_IMPORT,Poultry Meat ,M. Tonnes,FALSE,2015,quantity,33096,tonnes
+MALAY_IMPORT,Poultry Meat ,M. Tonnes,FALSE,2015,value_cif,370.03,million_rm
+MALAY_IMPORT,"Swine Meat (fresh, frozen & processed)",M. Tonnes,FALSE,2015,quantity,2565.2,tonnes
+MALAY_IMPORT,"Swine Meat (fresh, frozen & processed)",M. Tonnes,FALSE,2015,value_cif,45.54,million_rm
+MALAY_IMPORT,"Beef (fresh, frozen & processed)",M. Tonnes,FALSE,2016,quantity,4821.5,tonnes
+MALAY_IMPORT,"Beef (fresh, frozen & processed)",M. Tonnes,FALSE,2016,value_cif,79.46,million_rm
+MALAY_IMPORT,Buffaloes for breeding,No,FALSE,2016,quantity,32,head
+MALAY_IMPORT,Buffaloes for breeding,No,FALSE,2016,value_cif,0.03,million_rm
+MALAY_IMPORT,Buffaloes for slaughter,No,FALSE,2016,quantity,147,head
+MALAY_IMPORT,Buffaloes for slaughter,No,FALSE,2016,value_cif,0.09,million_rm
+MALAY_IMPORT,Cattle for breeding,No,FALSE,2016,quantity,76,head
+MALAY_IMPORT,Cattle for breeding,No,FALSE,2016,value_cif,0.05,million_rm
+MALAY_IMPORT,Cattle for slaughter,No,FALSE,2016,quantity,,head
+MALAY_IMPORT,Cattle for slaughter,No,FALSE,2016,value_cif,,million_rm
+MALAY_IMPORT,Day old chicks & ducklings,No,FALSE,2016,quantity,4576379,head
+MALAY_IMPORT,Day old chicks & ducklings,No,FALSE,2016,value_cif,29.87,million_rm
+MALAY_IMPORT,Fowl and Poultry,No,FALSE,2016,quantity,46173485,head
+MALAY_IMPORT,Fowl and Poultry,No,FALSE,2016,value_cif,563.34,million_rm
+MALAY_IMPORT,Live Ducks,No,FALSE,2016,quantity,5563219,head
+MALAY_IMPORT,Live Ducks,No,FALSE,2016,value_cif,141.68,million_rm
+MALAY_IMPORT,Live goats,No,FALSE,2016,quantity,30,head
+MALAY_IMPORT,Live goats,No,FALSE,2016,value_cif,0.01,million_rm
+MALAY_IMPORT,Live sheep,No,FALSE,2016,quantity,,head
+MALAY_IMPORT,Live sheep,No,FALSE,2016,value_cif,,million_rm
+MALAY_IMPORT,Live swine,No,FALSE,2016,quantity,,head
+MALAY_IMPORT,Live swine,No,FALSE,2016,value_cif,,million_rm
+MALAY_IMPORT,"Mutton (fresh, frozen & processed)",M. Tonnes,FALSE,2016,quantity,23.5,tonnes
+MALAY_IMPORT,"Mutton (fresh, frozen & processed)",M. Tonnes,FALSE,2016,value_cif,0.29,million_rm
+MALAY_IMPORT,Poultry Meat ,M. Tonnes,FALSE,2016,quantity,39668.4,tonnes
+MALAY_IMPORT,Poultry Meat ,M. Tonnes,FALSE,2016,value_cif,469.24,million_rm
+MALAY_IMPORT,"Swine Meat (fresh, frozen & processed)",M. Tonnes,FALSE,2016,quantity,2604.6,tonnes
+MALAY_IMPORT,"Swine Meat (fresh, frozen & processed)",M. Tonnes,FALSE,2016,value_cif,44.14,million_rm
+MALAY_IMPORT,"Beef (fresh, frozen & processed)",M. Tonnes,FALSE,2017,quantity,4775.1,tonnes
+MALAY_IMPORT,"Beef (fresh, frozen & processed)",M. Tonnes,FALSE,2017,value_cif,89.36,million_rm
+MALAY_IMPORT,Buffaloes for breeding,No,FALSE,2017,quantity,162,head
+MALAY_IMPORT,Buffaloes for breeding,No,FALSE,2017,value_cif,0.13,million_rm
+MALAY_IMPORT,Buffaloes for slaughter,No,FALSE,2017,quantity,8,head
+MALAY_IMPORT,Buffaloes for slaughter,No,FALSE,2017,value_cif,0.01,million_rm
+MALAY_IMPORT,Cattle for breeding,No,FALSE,2017,quantity,72,head
+MALAY_IMPORT,Cattle for breeding,No,FALSE,2017,value_cif,0.05,million_rm
+MALAY_IMPORT,Cattle for slaughter,No,FALSE,2017,quantity,,head
+MALAY_IMPORT,Cattle for slaughter,No,FALSE,2017,value_cif,,million_rm
+MALAY_IMPORT,Day old chicks & ducklings,No,FALSE,2017,quantity,4100260,head
+MALAY_IMPORT,Day old chicks & ducklings,No,FALSE,2017,value_cif,32.14,million_rm
+MALAY_IMPORT,Fowl and Poultry,No,FALSE,2017,quantity,47196567,head
+MALAY_IMPORT,Fowl and Poultry,No,FALSE,2017,value_cif,586.69,million_rm
+MALAY_IMPORT,Live Ducks,No,FALSE,2017,quantity,5482917,head
+MALAY_IMPORT,Live Ducks,No,FALSE,2017,value_cif,144.74,million_rm
+MALAY_IMPORT,Live goats,No,FALSE,2017,quantity,308,head
+MALAY_IMPORT,Live goats,No,FALSE,2017,value_cif,0.1,million_rm
+MALAY_IMPORT,Live sheep,No,FALSE,2017,quantity,,head
+MALAY_IMPORT,Live sheep,No,FALSE,2017,value_cif,,million_rm
+MALAY_IMPORT,Live swine,No,FALSE,2017,quantity,700,head
+MALAY_IMPORT,Live swine,No,FALSE,2017,value_cif,0.75,million_rm
+MALAY_IMPORT,"Mutton (fresh, frozen & processed)",M. Tonnes,FALSE,2017,quantity,23.9,tonnes
+MALAY_IMPORT,"Mutton (fresh, frozen & processed)",M. Tonnes,FALSE,2017,value_cif,0.52,million_rm
+MALAY_IMPORT,Poultry Meat ,M. Tonnes,FALSE,2017,quantity,37283.9,tonnes
+MALAY_IMPORT,Poultry Meat ,M. Tonnes,FALSE,2017,value_cif,479.03,million_rm
+MALAY_IMPORT,"Swine Meat (fresh, frozen & processed)",M. Tonnes,FALSE,2017,quantity,1880.8,tonnes
+MALAY_IMPORT,"Swine Meat (fresh, frozen & processed)",M. Tonnes,FALSE,2017,value_cif,35.65,million_rm
+MALAY_IMPORT,"Beef (fresh, frozen & processed)",M. Tonnes,FALSE,2018,quantity,3393,tonnes
+MALAY_IMPORT,"Beef (fresh, frozen & processed)",M. Tonnes,FALSE,2018,value_cif,69.78,million_rm
+MALAY_IMPORT,Buffaloes for breeding,No,FALSE,2018,quantity,69,head
+MALAY_IMPORT,Buffaloes for breeding,No,FALSE,2018,value_cif,0.05,million_rm
+MALAY_IMPORT,Buffaloes for slaughter,No,FALSE,2018,quantity,0,head
+MALAY_IMPORT,Buffaloes for slaughter,No,FALSE,2018,value_cif,0,million_rm
+MALAY_IMPORT,Cattle for breeding,No,FALSE,2018,quantity,54,head
+MALAY_IMPORT,Cattle for breeding,No,FALSE,2018,value_cif,0.08,million_rm
+MALAY_IMPORT,Cattle for slaughter,No,FALSE,2018,quantity,,head
+MALAY_IMPORT,Cattle for slaughter,No,FALSE,2018,value_cif,,million_rm
+MALAY_IMPORT,Day old chicks & ducklings,No,FALSE,2018,quantity,5094896,head
+MALAY_IMPORT,Day old chicks & ducklings,No,FALSE,2018,value_cif,35.14,million_rm
+MALAY_IMPORT,Fowl and Poultry,No,FALSE,2018,quantity,50727236,head
+MALAY_IMPORT,Fowl and Poultry,No,FALSE,2018,value_cif,602.88,million_rm
+MALAY_IMPORT,Live Ducks,No,FALSE,2018,quantity,5459468,head
+MALAY_IMPORT,Live Ducks,No,FALSE,2018,value_cif,137.08,million_rm
+MALAY_IMPORT,Live goats,No,FALSE,2018,quantity,60,head
+MALAY_IMPORT,Live goats,No,FALSE,2018,value_cif,0.02,million_rm
+MALAY_IMPORT,Live sheep,No,FALSE,2018,quantity,,head
+MALAY_IMPORT,Live sheep,No,FALSE,2018,value_cif,,million_rm
+MALAY_IMPORT,Live swine,No,FALSE,2018,quantity,37675,head
+MALAY_IMPORT,Live swine,No,FALSE,2018,value_cif,39.96,million_rm
+MALAY_IMPORT,"Mutton (fresh, frozen & processed)",M. Tonnes,FALSE,2018,quantity,241.1,tonnes
+MALAY_IMPORT,"Mutton (fresh, frozen & processed)",M. Tonnes,FALSE,2018,value_cif,4.38,million_rm
+MALAY_IMPORT,Poultry Meat ,M. Tonnes,FALSE,2018,quantity,40952.3,tonnes
+MALAY_IMPORT,Poultry Meat ,M. Tonnes,FALSE,2018,value_cif,503.88,million_rm
+MALAY_IMPORT,"Swine Meat (fresh, frozen & processed)",M. Tonnes,FALSE,2018,quantity,2097.9,tonnes
+MALAY_IMPORT,"Swine Meat (fresh, frozen & processed)",M. Tonnes,FALSE,2018,value_cif,39.2,million_rm
+MALAY_IMPORT,"Beef (fresh, frozen & processed)",M. Tonnes,FALSE,2019,quantity,5654.1,tonnes
+MALAY_IMPORT,"Beef (fresh, frozen & processed)",M. Tonnes,FALSE,2019,value_cif,85.08,million_rm
+MALAY_IMPORT,Buffaloes for breeding,No,FALSE,2019,quantity,306,head
+MALAY_IMPORT,Buffaloes for breeding,No,FALSE,2019,value_cif,0.45,million_rm
+MALAY_IMPORT,Buffaloes for slaughter,No,FALSE,2019,quantity,520,head
+MALAY_IMPORT,Buffaloes for slaughter,No,FALSE,2019,value_cif,0.6,million_rm
+MALAY_IMPORT,Cattle for breeding,No,FALSE,2019,quantity,76,head
+MALAY_IMPORT,Cattle for breeding,No,FALSE,2019,value_cif,0.07,million_rm
+MALAY_IMPORT,Cattle for slaughter,No,FALSE,2019,quantity,,head
+MALAY_IMPORT,Cattle for slaughter,No,FALSE,2019,value_cif,,million_rm
+MALAY_IMPORT,Day old chicks & ducklings,No,FALSE,2019,quantity,4699552,head
+MALAY_IMPORT,Day old chicks & ducklings,No,FALSE,2019,value_cif,30.03,million_rm
+MALAY_IMPORT,Fowl and Poultry,No,FALSE,2019,quantity,50612360,head
+MALAY_IMPORT,Fowl and Poultry,No,FALSE,2019,value_cif,601.57,million_rm
+MALAY_IMPORT,Live Ducks,No,FALSE,2019,quantity,5258718,head
+MALAY_IMPORT,Live Ducks,No,FALSE,2019,value_cif,134.63,million_rm
+MALAY_IMPORT,Live goats,No,FALSE,2019,quantity,,head
+MALAY_IMPORT,Live goats,No,FALSE,2019,value_cif,,million_rm
+MALAY_IMPORT,Live sheep,No,FALSE,2019,quantity,,head
+MALAY_IMPORT,Live sheep,No,FALSE,2019,value_cif,,million_rm
+MALAY_IMPORT,Live swine,No,FALSE,2019,quantity,56650,head
+MALAY_IMPORT,Live swine,No,FALSE,2019,value_cif,56.86,million_rm
+MALAY_IMPORT,"Mutton (fresh, frozen & processed)",M. Tonnes,FALSE,2019,quantity,59.5,tonnes
+MALAY_IMPORT,"Mutton (fresh, frozen & processed)",M. Tonnes,FALSE,2019,value_cif,1.11,million_rm
+MALAY_IMPORT,Poultry Meat ,M. Tonnes,FALSE,2019,quantity,43332.8,tonnes
+MALAY_IMPORT,Poultry Meat ,M. Tonnes,FALSE,2019,value_cif,573.5,million_rm
+MALAY_IMPORT,"Swine Meat (fresh, frozen & processed)",M. Tonnes,FALSE,2019,quantity,1757.9,tonnes
+MALAY_IMPORT,"Swine Meat (fresh, frozen & processed)",M. Tonnes,FALSE,2019,value_cif,30,million_rm

@@ -1,0 +1,57 @@
+dataset,region,commodity,measure_type,year,value,unit,flag,commodity_raw
+MALAY_CONS,Peninsular Malaysia,Beef,total,2014,192006,tonnes,,Beef (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Beef,total,2015,202877,tonnes,,Beef (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Beef,total,2016,194168,tonnes,,Beef (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Beef,total,2017,193589.3,tonnes,,Beef (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Beef,total,2018,191750.6,tonnes,,Beef (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Beef,total,2019,180931.3,tonnes,,Beef (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Beef,total,2020,188459.2,tonnes,estimate,Beef (M. Tan/M. Tonne)
+MALAY_CONS,Malaysia,Beef,total,2014,209108.2,tonnes,,Total
+MALAY_CONS,Malaysia,Beef,total,2015,218937,tonnes,,Total
+MALAY_CONS,Malaysia,Beef,total,2016,208154,tonnes,,Total
+MALAY_CONS,Malaysia,Beef,total,2017,208997.2,tonnes,,Total
+MALAY_CONS,Malaysia,Beef,total,2018,208618.1,tonnes,,Total
+MALAY_CONS,Malaysia,Beef,total,2019,197555.3,tonnes,,Total
+MALAY_CONS,Malaysia,Beef,total,2020,200254.9,tonnes,estimate,Total
+MALAY_CONS,Peninsular Malaysia,Mutton,total,2014,32610.5,tonnes,,Mutton (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Mutton,total,2015,35171.6,tonnes,,Mutton (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Mutton,total,2016,35441.5,tonnes,,Mutton (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Mutton,total,2017,39234,tonnes,,Mutton (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Mutton,total,2018,37528.9,tonnes,,Mutton (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Mutton,total,2019,32641.1,tonnes,,Mutton (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Mutton,total,2020,34497.4,tonnes,estimate,Mutton (M. Tan/M. Tonne)
+MALAY_CONS,Malaysia,Mutton,total,2014,35686.7,tonnes,,Total
+MALAY_CONS,Malaysia,Mutton,total,2015,38477.2,tonnes,,Total
+MALAY_CONS,Malaysia,Mutton,total,2016,38386.1,tonnes,,Total
+MALAY_CONS,Malaysia,Mutton,total,2017,43002.7,tonnes,,Total
+MALAY_CONS,Malaysia,Mutton,total,2018,40500.1,tonnes,,Total
+MALAY_CONS,Malaysia,Mutton,total,2019,35489.8,tonnes,,Total
+MALAY_CONS,Malaysia,Mutton,total,2020,37559.6,tonnes,estimate,Total
+MALAY_CONS,Peninsular Malaysia,Pork,total,2014,177518.8,tonnes,,Pork (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Pork,total,2015,182507.6,tonnes,,Pork (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Pork,total,2016,181112.3,tonnes,,Pork (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Pork,total,2017,184129.6,tonnes,,Pork (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Pork,total,2018,191053.5,tonnes,,Pork (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Pork,total,2019,190463.6,tonnes,,Pork (M. Tan/M. Tonne)
+MALAY_CONS,Peninsular Malaysia,Pork,total,2020,191207.6,tonnes,estimate,Pork (M. Tan/M. Tonne)
+MALAY_CONS,Malaysia,Pork,total,2014,227420.5,tonnes,,Total
+MALAY_CONS,Malaysia,Pork,total,2015,237888.1,tonnes,,Total
+MALAY_CONS,Malaysia,Pork,total,2016,214568.6,tonnes,,Total
+MALAY_CONS,Malaysia,Pork,total,2017,236833.5,tonnes,,Total
+MALAY_CONS,Malaysia,Pork,total,2018,246129.5,tonnes,,Total
+MALAY_CONS,Malaysia,Pork,total,2019,241503.3,tonnes,,Total
+MALAY_CONS,Malaysia,Pork,total,2020,241564,tonnes,estimate,Total
+MALAY_CONS,Peninsular Malaysia,Poultry Meat,total,2014,1379330,tonnes,,Poultry Meat ('000 M. Tan/'000 M.Tonne)
+MALAY_CONS,Peninsular Malaysia,Poultry Meat,total,2015,1427180,tonnes,,Poultry Meat ('000 M. Tan/'000 M.Tonne)
+MALAY_CONS,Peninsular Malaysia,Poultry Meat,total,2016,1553670,tonnes,,Poultry Meat ('000 M. Tan/'000 M.Tonne)
+MALAY_CONS,Peninsular Malaysia,Poultry Meat,total,2017,1460831,tonnes,,Poultry Meat ('000 M. Tan/'000 M.Tonne)
+MALAY_CONS,Peninsular Malaysia,Poultry Meat,total,2018,1444196,tonnes,,Poultry Meat ('000 M. Tan/'000 M.Tonne)
+MALAY_CONS,Peninsular Malaysia,Poultry Meat,total,2019,1440513,tonnes,,Poultry Meat ('000 M. Tan/'000 M.Tonne)
+MALAY_CONS,Peninsular Malaysia,Poultry Meat,total,2020,1389870.3,tonnes,estimate,Poultry Meat ('000 M. Tan/'000 M.Tonne)
+MALAY_CONS,Malaysia,Total,total,2014,1519180,tonnes,,Total ('000 M. Tan/'000 M.Tonne)
+MALAY_CONS,Malaysia,Total,total,2015,1568176,tonnes,,Total ('000 M. Tan/'000 M.Tonne)
+MALAY_CONS,Malaysia,Total,total,2016,1700220,tonnes,,Total ('000 M. Tan/'000 M.Tonne)
+MALAY_CONS,Malaysia,Total,total,2017,1605826,tonnes,,Total ('000 M. Tan/'000 M.Tonne)
+MALAY_CONS,Malaysia,Total,total,2018,1589740.3,tonnes,,Total ('000 M. Tan/'000 M.Tonne)
+MALAY_CONS,Malaysia,Total,total,2019,1590091,tonnes,,Total ('000 M. Tan/'000 M.Tonne)
+MALAY_CONS,Malaysia,Total,total,2020,1528562.3,tonnes,estimate,Total ('000 M. Tan/'000 M.Tonne)
