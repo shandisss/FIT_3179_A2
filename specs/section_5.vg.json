@@ -1,0 +1,79 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 380,
+  "autosize": { "resize": true },
+  "title": {
+    "text": "Can We Feed Ourselves? Self-Sufficiency Ratio (SSR%)",
+    "subtitle": "Poultry ≈ self-sufficient; beef/mutton are consistently import-dependent.",
+    "anchor": "start",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/data/MALAY_SARADIRI.csv",
+    "format": { "type": "csv" }
+  },
+  "transform": [
+    { "filter": "datum.region == 'Malaysia'" },
+    { "calculate": "toNumber(datum.value)", "as": "value_num" },
+    { "calculate": "replace(datum.commodity, ' Meat', '')", "as": "meat_type" }
+  ],
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "seriesSelect",
+          "select": { "type": "point", "fields": ["meat_type"] },
+          "bind": "legend"
+        }
+      ],
+      "mark": { "type": "line", "point": true, "interpolate": "monotone" },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "axis": { "title": "Year", "tickMinStep": 1, "format": "d" }
+        },
+        "y": {
+          "field": "value_num",
+          "type": "quantitative",
+          "stack": null,
+          "scale": { "domain": [0, 110] },
+          "axis": { "title": "SSR (%)" }
+        },
+        "color": {
+          "field": "meat_type",
+          "type": "nominal",
+          "title": "Meat type",
+          "scale": { "scheme": "set2" }
+        },
+        "opacity": { "condition": { "param": "seriesSelect", "value": 1 }, "value": 0.2 },
+        "tooltip": [
+          { "field": "meat_type", "title": "Meat type" },
+          { "field": "year", "type": "quantitative", "title": "Year" },
+          { "field": "value_num", "type": "quantitative", "title": "SSR (%)", "format": ".1f" },
+          { "field": "flag", "title": "Note" }
+        ]
+      }
+    },
+    {
+      "data": { "values": [ { "y": 100, "label": "100% self-sufficiency" } ] },
+      "mark": { "type": "rule", "strokeDash": [4, 4], "color": "#666" },
+      "encoding": {
+        "y": { "field": "y", "type": "quantitative" },
+        "tooltip": [ { "field": "label", "title": "Reference" } ]
+      }
+    },
+    {
+      "data": { "values": [ { "y": 100, "label": "100% self-sufficiency" } ] },
+      "mark": { "type": "text", "align": "right", "baseline": "bottom", "dx": -4, "dy": -2, "color": "#666", "fontSize": 11 },
+      "encoding": {
+        "x": { "datum": 2020 },
+        "y": { "field": "y", "type": "quantitative" },
+        "text": { "field": "label" }
+      }
+    }
+  ],
+  "config": { "view": { "stroke": null } }
+}

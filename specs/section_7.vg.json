@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Malaysia Livestock Trade: Imports vs Exports - Value (RM Million)",
+    "subtitle": "Imports backfill the ruminant gap; exports are limited and commodity-specific.",
+    "anchor": "start",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "width": 700,
+  "height": 420,
+  "autosize": { "resize": true },
+  "data": { "url": "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/data/MALAY_IMPORT_EXPORT.csv" },
+  "transform": [
+    { "filter": "datum.measure_type == 'value_cif'" },
+        { "filter": "datum.commodity != 'Live goats'" },
+
+    { "calculate": "toNumber(datum.import)", "as": "import_num" },
+    { "calculate": "toNumber(datum.export)", "as": "export_num" }
+  ],
+  "encoding": {
+    "x": { "field": "year", "type": "ordinal", "axis": { "title": "Year" } },
+    "color": {
+      "field": "commodity",
+      "type": "nominal",
+      "title": "Commodity",
+      "legend": { "columns": 1 }
+    },
+    "tooltip": [
+      { "field": "commodity", "type": "nominal", "title": "Commodity" },
+      { "field": "year", "type": "ordinal", "title": "Year" },
+      { "field": "import_num", "type": "quantitative", "title": "Import Value", "format": ".2f" },
+      { "field": "export_num", "type": "quantitative", "title": "Export Value", "format": ".2f" }
+    ]
+  },
+  "layer": [
+    {
+      "transform": [ { "calculate": "'Import'", "as": "Series" } ],
+      "mark": { "type": "line", "point": true, "tooltip": true },
+      "encoding": {
+        "y": {
+          "field": "import_num",
+          "type": "quantitative",
+          "axis": { "title": "Import Value", "grid": true, "orient": "left" }
+        },
+        "strokeDash": { "field": "Series", "type": "nominal", "legend": { "title": "" } },
+        "opacity": { "value": 0.9 }
+      }
+    },
+    {
+      "transform": [ { "calculate": "'Export'", "as": "Series" } ],
+      "mark": { "type": "line", "point": true, "tooltip": true },
+      "encoding": {
+        "y": {
+          "field": "export_num",
+          "type": "quantitative",
+          "axis": { "title": "Export Value", "grid": false, "orient": "right" }
+        },
+        "strokeDash": { "field": "Series", "type": "nominal", "legend": { "title": "" } },
+        "opacity": { "value": 0.9 }
+      }
+    }
+  ],
+  "resolve": { "scale": { "y": "independent" } },
+  "config": {
+    "legend": { "titleFontSize": 12, "labelFontSize": 11 },
+    "axis": { "labelFontSize": 11, "titleFontSize": 12 },
+    "view": { "stroke": "transparent" }
+  }
+}

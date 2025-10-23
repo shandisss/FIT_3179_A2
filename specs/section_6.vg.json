@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Supply vs Demand (Malaysia)",
+    "subtitle": "Grouped bars by year; facet by meat type. Hover to see deficit (consumption - production)."
+  },
+  "autosize": { "type": "fit", "contains": "padding" },
+
+  "data": { "url": "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/data/MALAY_CONS_PROD.csv" },
+
+  "transform": [
+    { "filter": "datum.region == 'Peninsular Malaysia' && indexof(['Beef','Mutton','Pork','Poultry Meat'], datum.commodity) >= 0" },
+    { "calculate": "+datum.value_production", "as": "production" },
+    { "calculate": "+datum.value_consumption", "as": "consumption" },
+    { "calculate": "datum.consumption - datum.production", "as": "deficit" },
+    { "fold": ["production", "consumption"], "as": ["series", "tonnes"] },
+    { "calculate": "datum.series == 'production' ? 'Production' : 'Consumption'", "as": "series_label" }
+  ],
+
+  "facet": { "field": "commodity", "type": "nominal", "title": null },
+  "columns": 2,
+
+  "spec": {
+    "width": 260,
+    "height": 220,
+    "mark": { "type": "bar", "tooltip": true },
+    "encoding": {
+      "x": {
+        "field": "year",
+        "type": "ordinal",
+        "title": "Year",
+        "axis": { "labelAngle": 0 }
+      },
+      "xOffset": { "field": "series_label" },
+      "y": {
+        "field": "tonnes",
+        "type": "quantitative",
+        "title": "Tonnes",
+        "axis": { "format": "," }
+      },
+      "color": {
+        "field": "series_label",
+        "type": "nominal",
+        "title": null,
+        "scale": { "domain": ["Production", "Consumption"], "range": ["#1f77b4", "#ff7f0e"] },
+        "legend": { "orient": "top", "direction": "horizontal" }
+      },
+      "tooltip": [
+        { "field": "region", "title": "Region" },
+        { "field": "commodity", "title": "Meat" },
+        { "field": "year", "type": "ordinal", "title": "Year" },
+        { "field": "series_label", "title": "Series" },
+        { "field": "tonnes", "type": "quantitative", "title": "Tonnes", "format": ",.0f" },
+        { "field": "deficit", "type": "quantitative", "title": "Deficit (cons - prod)", "format": ",.0f" }
+      ]
+    }
+  },
+
+  "resolve": { "scale": { "y": "independent" } }
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 380,
+  "autosize": { "resize": true },
+  "title": {
+    "text": "What’s on the Plate — Per-capita composition (Malaysia)",
+    "subtitle": "70–80% of meat intake is poultry. Use the slider to change year.",
+    "anchor": "start",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/data/MALAY_PKAPITA.csv",
+    "format": { "type": "csv" }
+  },
+  "params": [
+    {
+      "name": "yearSel",
+      "value": 2014,
+      "bind": { "input": "range", "min": 2014, "max": 2020, "step": 1 }
+    },{
+      "name": "seriesSelect",
+      "select": { "type": "point", "fields": ["meat_type"] },
+      "bind": "legend"
+    }
+  ],
+  "transform": [
+    { "filter": "datum.region == 'Malaysia'" },
+    { "filter": "datum.measure_type == 'per_capita'" },
+    { "filter": "datum.year == yearSel" },
+    { "filter": "datum.commodity != 'Pork (Kg) (Non-Muslim)'" },
+    { "calculate": "replace(replace(datum.commodity, ' (Kg)', ''), ' Meat', '')", "as": "meat_type" },
+    
+    { "joinaggregate": [{ "op": "sum", "field": "value", "as": "total" }], "groupby": ["year"] },
+    { "calculate": "datum.value / datum.total", "as": "percent" }
+  ],
+  "mark": { "type": "arc", "innerRadius": 80, "outerRadius": 180, "stroke": null },
+  "encoding": {
+    "theta": { "field": "value", "type": "quantitative", "stack": "normalize" },
+    "color": { "field": "meat_type", "type": "nominal", "title": "Meat type" },
+    "order": { "field": "value", "type": "quantitative", "sort": "descending" },
+    "opacity": { "condition": { "param": "seriesSelect", "value": 1 }, "value": 0.2 },
+    "tooltip": [
+      { "field": "meat_type", "title": "Meat type" },
+      { "field": "year", "type": "quantitative", "title": "Year" },
+      { "field": "value", "type": "quantitative", "title": "kg per person", "format": ".1f" },
+      { "field": "percent", "type": "quantitative", "title": "% of plate", "format": ".0%" },
+      { "field": "flag", "title": "Note" }
+    ]
+  },
+  "config": {
+    "view": { "stroke": null }
+  }
+}

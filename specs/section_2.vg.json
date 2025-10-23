@@ -1,0 +1,182 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "autosize": {
+    "resize": true
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/data/ne_10m_admin_1_states_provinces1.json",
+    "format": {
+      "type": "topojson",
+      "feature": "ne_10m_admin_1_states_provinces"
+    }
+  },
+  "params": [
+    {
+      "name": "YearSel",
+      "value": 2018,
+      "bind": {
+        "input": "range",
+        "min": 2015,
+        "max": 2018,
+        "step": 1,
+        "name": "Year: "
+      }
+    },
+    {
+      "name": "FarmSel",
+      "value": "All Farms",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All Farms",
+          "Beef Cattle Farm",
+          "Buffalo Farm",
+          "Chicken Meat Farm",
+          "Duck Meat Farm",
+          "Goat Farm",
+          "Pig Farm",
+          "Quail Meat Farm"
+        ],
+        "name": "Farm Type: "
+      }
+    }
+  ],
+  "title": {
+    "text": "Malaysia: Farm Registrations by State",
+    "anchor": "start",
+    "fontSize": 18
+  },
+  "width": 500,
+  "height": 300,
+  "projection": {
+    "type": "mercator"
+   
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "calculate": "'Data is not available in ' + datum.properties.name",
+          "as": "note"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray",
+        "stroke": "white"
+      },
+      "encoding": {
+        "tooltip": {
+          "condition": {
+            "test": "datum.properties && datum.properties.admin == 'Malaysia'",
+            "field": "note"
+          },
+          "value": null
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/data/TOTAL_REGISTRATIONS_BY_COMMODITY_FROM_2015-2018.csv"
+      },
+      "transform": [
+        {
+          "filter": "toNumber(datum.year) == YearSel"
+        },
+        {
+          "calculate": "toNumber(datum.value)",
+          "as": "value_num"
+        },
+        {
+          "calculate": "FarmSel == 'All Farms' ? 'All Farms' : datum.farm_type",
+          "as": "FarmKey"
+        },
+        {
+          "aggregate": [{ "op": "sum", "field": "value_num", "as": "value_num" }],
+          "groupby": ["state", "year", "FarmKey"]
+        },
+        {
+          "filter": "datum.FarmKey == FarmSel"
+        },
+        {
+          "calculate": "datum.value_num > 0 ? datum.value_num : null",
+          "as": "value_for_color"
+        },
+        {
+          "lookup": "state",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/data/ne_10m_admin_1_states_provinces1.json",
+              "format": {
+                "type": "topojson",
+                "feature": "ne_10m_admin_1_states_provinces"
+              }
+            },
+            "key": "properties.name",
+            "fields": [
+              "type",
+              "geometry",
+              "properties"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "white"
+      },
+      "params": [
+        {
+          "name": "countrySelection",
+          "select": {
+            "type": "point"
+          }
+        }
+      ],
+      "encoding": {
+        "shape": {
+          "field": "geometry",
+          "type": "geojson"
+        },
+        "color": {
+          "condition": [
+            {
+              "test": "!isValid(datum.value_num) || datum.value_num <= 0",
+              "value": "#e6e6e6"
+            }
+          ],
+          "field": "value_for_color",
+          "title": "Farms",
+          "type": "quantitative",
+          "scale": {
+            "type": "quantile",
+            "scheme": { "name": "greens", "count": 7 },
+            "clamp": true
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "value_num",
+            "type": "quantitative",
+            "title": "Farm registrations"
+          },
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "FarmKey",
+            "type": "nominal",
+            "title": "Farm Type"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 380,
+  "autosize": { "resize": true },
+  "title": {
+    "text": "Per-capita meat consumption in Malaysia (2014–2020)",
+    "subtitle": "Poultry dominates; other meats are comparatively low.",
+    "anchor": "start",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/data/MALAY_PKAPITA.csv",
+    "format": { "type": "csv" }
+  },
+  "transform": [
+    { "filter": "datum.region == 'Malaysia'" },
+    { "filter": "datum.measure_type == 'per_capita'" },
+    {
+      "calculate": "replace(replace(datum.commodity, ' (Kg)', ''), ' Meat', '')",
+      "as": "meat_type"
+    }
+  ],
+  "params": [
+    {
+      "name": "seriesSelect",
+      "select": { "type": "point", "fields": ["meat_type"] },
+      "bind": "legend"
+    }
+  ],
+  "mark": { "type": "line", "point": true },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "axis": { "title": "Year", "tickMinStep": 1, "format": "d" }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": { "title": "kg per person" }
+    },
+    "color": {
+      "field": "meat_type",
+      "type": "nominal",
+      "title": "Meat type"
+    },
+    "opacity": { "condition": { "param": "seriesSelect", "value": 1 }, "value": 0.2 },
+    "tooltip": [
+      { "field": "meat_type", "title": "Meat type" },
+      { "field": "year", "type": "quantitative", "title": "Year" },
+      { "field": "value", "type": "quantitative", "title": "kg per person", "format": ".1f" },
+      { "field": "flag", "title": "Note" }
+    ]
+  },
+  "config": {
+    "view": { "stroke": null }
+  }
+}
