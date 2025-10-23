@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 380,
-  "autosize": { "resize": true },
+  "autosize": { "type": "fit", "contains": "padding" },
   "title": {
     "text": "What’s on the Plate — Per-capita composition (Malaysia)",
     "subtitle": "70–80% of meat intake is poultry. Use the slider to change year.",
