@@ -41,7 +41,8 @@
     {
       "name": "yearSel",
       "value": 2014,
-      "bind": { "input": "range", "min": 2014, "max": 2020, "step": 1 }
+      "bind": { "input": "range", "min": 2014, "max": 2020, "step": 1,"name": "Year: " }
+      
     },{
       "name": "seriesSelect",
       "select": { "type": "point", "fields": ["meat_type"] },
