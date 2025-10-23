@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 380,
   "autosize": { "type": "fit", "contains": "padding" },
   "title": {
     "text": "What’s on the Plate — Per-capita composition (Malaysia)",
