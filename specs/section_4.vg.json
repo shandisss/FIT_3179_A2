@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
+  "width": "container",
   "height": 380,
   "autosize": { "resize": true },
   "title": {
@@ -26,7 +26,7 @@
     }
   ],
   "transform": [
-    { "filter": "datum.region == 'Malaysia'" },
+    { "filter": "datum.region == 'Peninsular Malaysia'" },
     { "filter": "datum.measure_type == 'per_capita'" },
     { "filter": "datum.year == yearSel" },
     { "filter": "datum.commodity != 'Pork (Kg) (Non-Muslim)'" },

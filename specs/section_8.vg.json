@@ -7,7 +7,7 @@
     "fontSize": 16,
     "subtitleFontSize": 12
   },
-  "width": 700,
+  "width": "container",
   "height": 420,
   "autosize": { "resize": true },
   "data": { "url": "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/data/MALAY_IMPORT_EXPORT.csv" },

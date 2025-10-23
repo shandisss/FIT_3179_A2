@@ -46,7 +46,7 @@
     "anchor": "start",
     "fontSize": 18
   },
-  "width": 500,
+  "width": "container",
   "height": 300,
   "projection": {
     "type": "mercator"
