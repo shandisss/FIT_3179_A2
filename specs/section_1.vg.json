@@ -53,7 +53,7 @@
         "anchor": "start",
         "fontSize": 18
     },
-    "width": 1000,
+    "width": "container",
     "height": 500,
     "projection": {
         "type": "equalEarth",

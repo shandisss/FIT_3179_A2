@@ -21,7 +21,7 @@
   "columns": 2,
 
   "spec": {
-    "width": "container",
+    "width": 300,
     "height": 220,
     "mark": { "type": "bar", "tooltip": true },
     "encoding": {
