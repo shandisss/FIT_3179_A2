@@ -1,0 +1,81 @@
+commodity,year,measure_type,import,unit,export
+"Beef (fresh, frozen & processed)",2015,quantity,177763.5,tonnes,9319.2
+"Beef (fresh, frozen & processed)",2015,value_cif,2205.6,million_rm,124.26
+Buffaloes for slaughter,2015,quantity,510,head,166
+Buffaloes for slaughter,2015,value_cif,0.87,million_rm,0.16
+Cattle for slaughter,2015,quantity,68047,head,NA
+Cattle for slaughter,2015,value_cif,211.39,million_rm,NA
+Live Poultry,2015,quantity,162839,head,46188547
+Live Poultry,2015,value_cif,4.21,million_rm,548.2
+Live Ducks,2015,quantity,3545,head,5622606
+Live Ducks,2015,value_cif,0.15,million_rm,138.8
+Live goats,2015,quantity,86386,head,35
+Live goats,2015,value_cif,61.81,million_rm,0.02
+"Mutton (fresh, frozen & processed)",2015,quantity,34131.4,tonnes,60.8
+"Mutton (fresh, frozen & processed)",2015,value_cif,521.73,million_rm,0.67
+Poultry Meat,2015,quantity,56574.5,tonnes,33096
+Poultry Meat,2015,value_cif,451.11,million_rm,370.03
+"Beef (fresh, frozen & processed)",2016,quantity,165019.6,tonnes,4821.5
+"Beef (fresh, frozen & processed)",2016,value_cif,2101.77,million_rm,79.46
+Buffaloes for slaughter,2016,quantity,905,head,147
+Buffaloes for slaughter,2016,value_cif,4.07,million_rm,0.09
+Cattle for slaughter,2016,quantity,45050,head,NA
+Cattle for slaughter,2016,value_cif,156.49,million_rm,NA
+Live Poultry,2016,quantity,178122,head,46173485
+Live Poultry,2016,value_cif,2.24,million_rm,563.34
+Live Ducks,2016,quantity,124087,head,5563219
+Live Ducks,2016,value_cif,4.23,million_rm,141.68
+Live goats,2016,quantity,50521,head,30
+Live goats,2016,value_cif,44.31,million_rm,0.01
+"Mutton (fresh, frozen & processed)",2016,quantity,33418,tonnes,23.5
+"Mutton (fresh, frozen & processed)",2016,value_cif,498.41,million_rm,0.29
+Poultry Meat,2016,quantity,72855.9,tonnes,39668.4
+Poultry Meat,2016,value_cif,521.19,million_rm,469.24
+"Beef (fresh, frozen & processed)",2017,quantity,167439.2,tonnes,4775.1
+"Beef (fresh, frozen & processed)",2017,value_cif,2366.96,million_rm,89.36
+Buffaloes for slaughter,2017,quantity,1974,head,8
+Buffaloes for slaughter,2017,value_cif,4.81,million_rm,0.01
+Cattle for slaughter,2017,quantity,31831,head,NA
+Cattle for slaughter,2017,value_cif,115.68,million_rm,NA
+Live Poultry,2017,quantity,219,head,47196567
+Live Poultry,2017,value_cif,0.01,million_rm,586.69
+Live Ducks,2017,quantity,82504,head,5482917
+Live Ducks,2017,value_cif,2.82,million_rm,144.74
+Live goats,2017,quantity,9943,head,308
+Live goats,2017,value_cif,13.1,million_rm,0.1
+"Mutton (fresh, frozen & processed)",2017,quantity,38626.6,tonnes,23.9
+"Mutton (fresh, frozen & processed)",2017,value_cif,791.98,million_rm,0.52
+Poultry Meat,2017,quantity,68285.6,tonnes,37283.9
+Poultry Meat,2017,value_cif,633.62,million_rm,479.03
+"Beef (fresh, frozen & processed)",2018,quantity,165087.5,tonnes,3393
+"Beef (fresh, frozen & processed)",2018,value_cif,2173.68,million_rm,69.78
+Buffaloes for slaughter,2018,quantity,4108,head,0
+Buffaloes for slaughter,2018,value_cif,14.95,million_rm,0
+Cattle for slaughter,2018,quantity,66429,head,NA
+Cattle for slaughter,2018,value_cif,91.6,million_rm,NA
+Live Poultry,2018,quantity,12222,head,50727236
+Live Poultry,2018,value_cif,0.29,million_rm,602.88
+Live Ducks,2018,quantity,100907,head,5459468
+Live Ducks,2018,value_cif,3.43,million_rm,137.08
+Live goats,2018,quantity,18748,head,60
+Live goats,2018,value_cif,21.44,million_rm,0.02
+"Mutton (fresh, frozen & processed)",2018,quantity,36307.5,tonnes,241.1
+"Mutton (fresh, frozen & processed)",2018,value_cif,732.9,million_rm,4.38
+Poultry Meat,2018,quantity,72589.3,tonnes,40952.3
+Poultry Meat,2018,value_cif,650.87,million_rm,503.88
+"Beef (fresh, frozen & processed)",2019,quantity,159185,tonnes,5654.1
+"Beef (fresh, frozen & processed)",2019,value_cif,2008.39,million_rm,85.08
+Buffaloes for slaughter,2019,quantity,927,head,520
+Buffaloes for slaughter,2019,value_cif,3.16,million_rm,0.6
+Cattle for slaughter,2019,quantity,36373,head,NA
+Cattle for slaughter,2019,value_cif,108.62,million_rm,NA
+Live Poultry,2019,quantity,NA,head,50612360
+Live Poultry,2019,value_cif,NA,million_rm,601.57
+Live Ducks,2019,quantity,NA,head,5258718
+Live Ducks,2019,value_cif,NA,million_rm,134.63
+Live goats,2019,quantity,10224,head,NA
+Live goats,2019,value_cif,11.79,million_rm,NA
+"Mutton (fresh, frozen & processed)",2019,quantity,31348.7,tonnes,59.5
+"Mutton (fresh, frozen & processed)",2019,value_cif,679.48,million_rm,1.11
+Poultry Meat,2019,quantity,73289.9,tonnes,43332.8
+Poultry Meat,2019,value_cif,677.25,million_rm,573.5
