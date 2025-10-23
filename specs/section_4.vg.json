@@ -14,17 +14,6 @@
     "url": "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/data/MALAY_PKAPITA.csv",
     "format": { "type": "csv" }
   },
-  "params": [
-    {
-      "name": "yearSel",
-      "value": 2014,
-      "bind": { "input": "range", "min": 2014, "max": 2020, "step": 1 }
-    },{
-      "name": "seriesSelect",
-      "select": { "type": "point", "fields": ["meat_type"] },
-      "bind": "legend"
-    }
-  ],
   "transform": [
     { "filter": "datum.region == 'Peninsular Malaysia'" },
     { "filter": "datum.measure_type == 'per_capita'" },
@@ -49,6 +38,17 @@
       { "field": "flag", "title": "Note" }
     ]
   },
+  "params": [
+    {
+      "name": "yearSel",
+      "value": 2014,
+      "bind": { "input": "range", "min": 2014, "max": 2020, "step": 1 }
+    },{
+      "name": "seriesSelect",
+      "select": { "type": "point", "fields": ["meat_type"] },
+      "bind": "legend"
+    }
+  ],
   "config": {
     "view": { "stroke": null }
   }
