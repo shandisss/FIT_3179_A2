@@ -4,7 +4,7 @@
     "text": "Supply vs Demand (Malaysia)",
     "subtitle": "Grouped bars by year; facet by meat type. Hover to see deficit (consumption - production)."
   },
-  "autosize": { "type": "fit", "contains": "padding" },
+  "autosize": { "resize": true },
 
   "data": { "url": "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/data/MALAY_CONS_PROD.csv" },
 
@@ -21,7 +21,7 @@
   "columns": 2,
 
   "spec": {
-    "width": 300,
+    "width": "container",
     "height": 220,
     "mark": { "type": "bar", "tooltip": true },
     "encoding": {
