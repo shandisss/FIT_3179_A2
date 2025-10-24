@@ -1,7 +1,6 @@
-// Prefer local specs during development; fall back to GitHub raw if unavailable
 const LOCAL_BASE  = "./specs/";
 const REMOTE_BASE = "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/specs/";
-const bust = `?v=${Date.now()}`; // cache-buster
+const bust = `?v=${Date.now()}`; 
 
 const charts = [
   ["#viz-s1", "section_1.vg.json"],
@@ -9,7 +8,7 @@ const charts = [
   ["#viz-s3", "section_3.vg.json"],
   ["#viz-s4", "section_4.vg.json"],
   ["#viz-s5", "section_5.vg.json"],
-  ["#viz-s6", "section_6.vg.json"],  // faceted one
+  ["#viz-s6", "section_6.vg.json"], 
   ["#viz-s7", "section_7.vg.json"],
   ["#viz-s8", "section_8.vg.json"]
 ];
@@ -36,7 +35,6 @@ function tuneSpec(spec, containerEl) {
   const w = containerEl.clientWidth;
   const small = w < 720;
 
-  // 1) Responsive typography defaults (non-destructive merge)
   const baseConfig = {
     axis:   { labelFontSize: small ? 10 : 12, titleFontSize: small ? 11 : 13 },
     legend: { labelFontSize: small ? 10 : 12, titleFontSize: small ? 11 : 13},
@@ -45,12 +43,9 @@ function tuneSpec(spec, containerEl) {
   };
   spec.config = mergeConfig(spec.config, baseConfig);
 
-  // 2) Autosize merge 
   spec.autosize = { ...(spec.autosize || {}), type: "fit", contains: "padding", resize: true };
 
-  // 3) Width/height rules
   if (spec.facet && spec.spec) {
-    // Faceted chart: size EACH panel
     if (spec.spec.width === undefined || spec.spec.width === "container") {
       spec.spec.width = small ? 300 : 360;
     }
@@ -58,7 +53,6 @@ function tuneSpec(spec, containerEl) {
       spec.spec.height = small ? 200 : 230;
     }
   } else {
-    // Non-faceted: let it fill its parent unless author already set a number
     if (spec.width === undefined) spec.width = "container";
     if (spec.height === undefined) spec.height = small ? 360 : 420;
   }
@@ -90,7 +84,6 @@ async function embedAll() {
 // Initial render
 embedAll();
 
-// Re-embed on resize (debounced)
 let raf;
 window.addEventListener("resize", () => {
   cancelAnimationFrame(raf);
