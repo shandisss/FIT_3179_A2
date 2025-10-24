@@ -1,6 +1,6 @@
 const LOCAL_BASE  = "./specs/";
 const REMOTE_BASE = "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/specs/";
-const bust = `?v=${Date.now()}`; 
+const bust = `?v=${Date.now()}`;
 
 const charts = [
   ["#viz-s1", "section_1.vg.json"],
@@ -8,10 +8,12 @@ const charts = [
   ["#viz-s3", "section_3.vg.json"],
   ["#viz-s4", "section_4.vg.json"],
   ["#viz-s5", "section_5.vg.json"],
-  ["#viz-s6", "section_6.vg.json"], 
+  ["#viz-s6", "section_6.vg.json"],
   ["#viz-s7", "section_7.vg.json"],
   ["#viz-s8", "section_8.vg.json"]
 ];
+
+const views = new Map(); // id -> { embed, view }
 
 async function loadSpec(base, file) {
   const res = await fetch(base + file + bust);
@@ -19,44 +21,15 @@ async function loadSpec(base, file) {
   return res.json();
 }
 
-// deep-merge helper for config sub-objects so we don’t clobber nested keys
-function mergeConfig(target = {}, extra = {}) {
-  return {
-    ...target,
-    axis:   { ...(target.axis   || {}), ...(extra.axis   || {}) },
-    legend: { ...(target.legend || {}), ...(extra.legend || {}) },
-    header: { ...(target.header || {}), ...(extra.header || {}) },
-    title:  { ...(target.title  || {}), ...(extra.title  || {}) }
+function tuneSpec(spec, el) {
+  spec.width = "container";
+  spec.autosize = { type: "fit", contains: "padding" };
+  spec.config = {
+    ...(spec.config || {}),
+    axis:   { ...(spec.config?.axis || {}),   labelFont: "Open Sans", titleFont: "Open Sans", labelFontSize: 12, titleFontSize: 13 },
+    legend: { ...(spec.config?.legend || {}), labelFont: "Open Sans", titleFont: "Open Sans", labelFontSize: 12, titleFontSize: 13 },
+    title:  { ...(spec.config?.title || {}),  font: "Open Sans", fontSize: 18, fontWeight: 600 }
   };
-}
-
-// Apply responsive typography + sizes without overwriting author intent
-function tuneSpec(spec, containerEl) {
-  const w = containerEl.clientWidth;
-  const small = w < 720;
-
-  const baseConfig = {
-    axis:   { labelFontSize: small ? 10 : 12, titleFontSize: small ? 11 : 13 },
-    legend: { labelFontSize: small ? 10 : 12, titleFontSize: small ? 11 : 13},
-    header: { labelFontSize: small ? 12 : 13, titleFontSize: small ? 13 : 14 },
-    title:  { fontSize: small ? 16 : 18, subtitleFontSize: small ? 12 : 13 }
-  };
-  spec.config = mergeConfig(spec.config, baseConfig);
-
-  spec.autosize = { ...(spec.autosize || {}), type: "fit", contains: "padding", resize: true };
-
-  if (spec.facet && spec.spec) {
-    if (spec.spec.width === undefined || spec.spec.width === "container") {
-      spec.spec.width = small ? 300 : 360;
-    }
-    if (spec.spec.height === undefined) {
-      spec.spec.height = small ? 200 : 230;
-    }
-  } else {
-    if (spec.width === undefined) spec.width = "container";
-    if (spec.height === undefined) spec.height = small ? 360 : 420;
-  }
-
   return spec;
 }
 
@@ -64,28 +37,25 @@ async function embedOne(id, file) {
   const el = document.querySelector(id);
   if (!el) return;
 
-  let spec;
-  try {
-    // Try local first
-    spec = await loadSpec(LOCAL_BASE, file);
-  } catch {
-    // Fallback to remote
-    spec = await loadSpec(REMOTE_BASE, file);
+  const cached = views.get(id);
+  if (cached) {
+    try { await cached.view.resize(); } catch {}
+    return cached;
   }
 
+  let spec;
+  try { spec = await loadSpec(LOCAL_BASE, file); }
+  catch { spec = await loadSpec(REMOTE_BASE, file); }
+
   const tuned = tuneSpec(spec, el);
-  return vegaEmbed(id, tuned, { actions: false, renderer: "svg" });
+
+  const result = await vegaEmbed(id, tuned, { actions: false, renderer: "canvas" });
+  views.set(id, { embed: result, view: result.view });
+  return result;
 }
 
 async function embedAll() {
-  await Promise.all(charts.map(([id, file]) => embedOne(id, file)));
+  for (const [id, file] of charts) await embedOne(id, file);
 }
 
-// Initial render
 embedAll();
-
-let raf;
-window.addEventListener("resize", () => {
-  cancelAnimationFrame(raf);
-  raf = requestAnimationFrame(embedAll);
-});
