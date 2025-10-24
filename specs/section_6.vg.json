@@ -4,7 +4,9 @@
     "text": "Supply vs Demand (Malaysia)",
     "subtitle": "Grouped bars by year; facet by meat type. Hover to see deficit (consumption - production)."
   },
-  "autosize": { "resize": true },
+  "autosize": { "type": "fit", "contains": "padding" },
+  
+
 
   "data": { "url": "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/data/MALAY_CONS_PROD.csv" },
 
@@ -21,8 +23,8 @@
   "columns": 2,
 
   "spec": {
-    "width": "container",
-    "height": 220,
+    "width":490,
+    "height": 360,
     "mark": { "type": "bar", "tooltip": true },
     "encoding": {
       "x": {
@@ -43,7 +45,7 @@
         "type": "nominal",
         "title": null,
         "scale": { "domain": ["Production", "Consumption"], "range": ["#1f77b4", "#ff7f0e"] },
-        "legend": { "orient": "top", "direction": "horizontal" }
+        "legend": { "orient": "top", "direction": "horizontal", "offset":-5 }
       },
       "tooltip": [
         { "field": "region", "title": "Region" },
@@ -56,5 +58,14 @@
     }
   },
 
-  "resolve": { "scale": { "y": "independent" } }
+  "resolve": { "scale": { "y": "independent" } },
+  
+
+  "config": {
+    
+    "header": { "labelFontSize": 11, "titleFontSize": 12 },
+    "title":  { "fontSize": 16, "subtitleFontSize": 12},"view": { "stroke": null }
+
+  }
+
 }

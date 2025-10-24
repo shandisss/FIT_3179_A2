@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 380,
-  "autosize": { "resize": true },
+  "height": 460,
+  "autosize": { "type": "fit", "contains": "padding" },
   "title": {
     "text": "Per-capita meat consumption in Malaysia (2014–2020)",
     "subtitle": "Poultry dominates; other meats are comparatively low.",
@@ -22,38 +22,81 @@
       "as": "meat_type"
     }
   ],
-  "params": [
+  "layer": [    {
+      "data": { "values": [ {} ] },
+      "mark": {
+        "type": "rect",
+        "fill": "white",
+        "opacity": 0.85,
+        "stroke": "#ccc",
+        "strokeWidth": 1,
+        "cornerRadius": 6
+      },
+      "encoding": {
+        "x": { "value": 275 },
+        "x2": { "value": 465 },
+        "y": { "value": 160 },
+        "y2": { "value": 230 }
+      }
+    }, {
+      "data": {
+        "values": [
+          {
+            "note": "Pork intake remains stable\namong non-Muslim population,\n~2.5× the national average."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 12,
+        "fontWeight": "normal",
+        "lineBreak": "\n",
+        "color": "#333"
+      },
+      "encoding": {
+        "x": { "value": 290 },
+        "y": { "value": 180 },
+        "text": { "field": "note" }
+      }
+    },
+    { "params": [
     {
       "name": "seriesSelect",
       "select": { "type": "point", "fields": ["meat_type"] },
       "bind": "legend"
     }
   ],
-  "mark": { "type": "line", "point": true },
-  "encoding": {
-    "x": {
-      "field": "year",
-      "type": "quantitative",
-      "axis": { "title": "Year", "tickMinStep": 1, "format": "d" }
-    },
-    "y": {
-      "field": "value",
-      "type": "quantitative",
-      "axis": { "title": "kg per person" }
-    },
-    "color": {
-      "field": "meat_type",
-      "type": "nominal",
-      "title": "Meat type"
-    },
-    "opacity": { "condition": { "param": "seriesSelect", "value": 1 }, "value": 0.2 },
-    "tooltip": [
-      { "field": "meat_type", "title": "Meat type" },
-      { "field": "year", "type": "quantitative", "title": "Year" },
-      { "field": "value", "type": "quantitative", "title": "kg per person", "format": ".1f" },
-      { "field": "flag", "title": "Note" }
-    ]
-  },
+      "mark": { "type": "line", "point": true },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "axis": { "title": "Year", "tickMinStep": 1, "format": "d", "grid": false }
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "axis": { "title": "kg per person" }
+        },
+        "color": {
+          "field": "meat_type",
+          "type": "nominal",
+          "title": "Meat type"
+        },
+        "opacity": {
+          "condition": { "param": "seriesSelect", "value": 1 },
+          "value": 0.2
+        },
+        "tooltip": [
+          { "field": "meat_type", "title": "Meat type" },
+          { "field": "year", "type": "quantitative", "title": "Year" },
+          { "field": "value", "type": "quantitative", "title": "kg per person", "format": ".1f" },
+          { "field": "flag", "title": "Note" }
+        ]
+      }
+    }
+  ],
   "config": {
     "view": { "stroke": null }
   }

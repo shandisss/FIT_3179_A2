@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Malaysia Meat Consumption – FIT3179 DV2</title>
+
+	<!-- Vega Libraries -->
+	<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+	<!-- Fonts + CSS -->
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+	<header class="hero">
+		<h1 class="hero__title">MALAYSIA’S <span style="color:#A0522D">MEAT</span> CONSUMPTION LANDSCAPE</h1>
+		<p class="hero__tag">An exploration of meat demand, self-sufficiency, and trade – from global context to local
+			capacity.</p>
+	</header>
+
+	<main class="wrap">
+		<!-- Section 1: Full-width Hero (Global Context) -->
+		<section class="card full">
+			<div id="viz-s1" class="chart"></div>
+		</section>
+
+		<!-- Section 2: Malaysia Farm Registrations (Text Left | Chart Right) -->
+		<section class="card">
+			<div class="card-body grid">
+				<aside class="side">
+					<h2>Farming the Demand</h2>
+					<p>Malaysia’s farm registry is dominated by ruminants – especially cattle and goats – with Kelantan
+						and Terengganu leading beef farm counts. Pig farms are few and concentrated in Pulau Pinang. The
+						registry omits industrial poultry operations, implying their scale is managed elsewhere. This
+						split highlights Malaysia’s dual system: commercial poultry vs smallholder ruminants. </p>
+						
+						
+				</aside>
+				<div class="chart">
+					<div id="viz-s2"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Section 3: Per-Capita Consumption (Chart Left | Text Right) -->
+		<section class="card">
+			<div class="card-body grid reverse">
+				<div class="chart">
+					<div id="viz-s3"></div>
+				</div>
+				<aside class="side">
+					<h2>Consumption Trends by Meat Type</h2>
+					<p>Between 2014–2020, poultry stayed the top protein, though with a mild decline. Pork remained
+						stable, demographically tied to non-Muslim consumers. Beef and mutton declined modestly, showing
+						the effects of limited supply and cultural preference. The market overall appears saturated,
+						with demand peaking post-2016.</p>
+				</aside>
+			</div>
+		</section>
+
+		<!-- Section 4: Composition Donut (Text Left | Chart Right) -->
+		<section class="card">
+			<div class="card-body grid">
+				<aside class="side">
+					<h2>Yearly Meat Share Snapshot</h2>
+					<p>Malaysia’s meat consumption is overwhelmingly poultry-based, consistently accounting for 70–80%
+						of total intake. This dominance reflects poultry’s affordability, availability, and cultural
+						acceptability across communities. Pork, beef, and mutton contribute much smaller shares, with
+						pork intake concentrated among the non-Muslim population. Year-on-year shifts are minor,
+						suggesting that consumer preferences remain steady despite supply fluctuations.</p>
+				</aside>
+				<div class="chart">
+					<div id="viz-s4"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Section 5: Self-Sufficiency Ratios (Chart Left | Text Right) -->
+		<section class="card">
+			<div class="card-body grid reverse">
+				<div class="chart">
+					<div id="viz-s5"></div>
+				</div>
+				<aside class="side">
+					<h2>Can We Feed Ourselves?</h2>
+					<p>Malaysia produces enough poultry and nearly enough pork to meet demand. But beef and mutton lag
+						far behind, with SSRs below 25%. This structural reliance on imports underscores vulnerability
+						in ruminant supply and signals where investment is lacking.</p>
+						<p>The SSR hierarchy also aligns closely with per-capita consumption levels, reflecting how supply capacity reinforces dietary preferences.</p>
+				</aside>
+			</div>
+		</section>
+
+		<!-- Section 6: Full-width Card (Production vs Consumption) -->
+		<section class="card full">
+			<div class="chart">
+				<div id="viz-s6"></div>
+			</div>
+		</section>
+
+		<!-- Section 7 + 8: Trade (Text Left | Charts Stacked Right) -->
+		<section class="card">
+  <div class="card-body grid">
+    <aside class="side">
+      <h2>Imports Bridge the Gap</h2>
+      
+      <div style="margin-bottom: 154px;">
+        <p><strong>Value-Based Trade Insights </strong><br>
+        Malaysia’s livestock trade reveals a sharp imbalance: imports vastly outweigh exports in both value and diversity. In 2019, beef imports alone approached RM 2.4 billion, highlighting Malaysia’s heavy reliance on international ruminant supply. Poultry, despite being self-sufficient domestically, still shows rising import values — particularly in processed forms — suggesting growing demand for value-added or specialty poultry products. Exports remain limited, focused on live ducks and live poultry to niche ASEAN markets, with minimal gains in high-value categories.</p>
+      </div>
+
+      <div>
+        <p><strong>Quantity-Based Trade Patterns </strong><br>
+        When measured by volume, the story remains consistent: imports fill the ruminant supply gap, with beef and mutton dominating inbound tonnes. Poultry volumes are also substantial, though this may reflect cross-border trade in live birds rather than supply shortfalls. Exports, by contrast, are narrow and commodity-specific — dominated by live poultry and ducks — and show little year-on-year expansion. The overall pattern reinforces Malaysia’s dependence on meat imports, especially for beef and mutton, and highlights untapped export potential.</p>
+      </div>
+    </aside>
+
+    <div class="chart">
+      <div id="viz-s7"></div>
+      <div style="margin-top:24px" id="viz-s8"></div>
+    </div>
+  </div>
+</section>
+<section class="card full">
+  <div class="card-body">
+    <h2>Data Sources</h2>
+    <ul style="padding-left: 20px; margin-top: 12px; line-height: 1.6;">
+      <li>
+        <a href="https://archive.data.gov.my/data/dataset/b7dd37e4-530c-422c-bffa-6089082ffab6/resource/1287dc56-b4b1-4fa7-a718-4ba1343f4b8c/download/jumlah-pendaftaran-ladang-premis-ternakan-mengikut-komoditi-di-semenanjung-malaysia.xlsx" target="_blank" rel="noopener">
+          Jabatan Perkhidmatan Veterinar (DVS), Malaysia – Livestock Premise Registrations by Commodity (Sem. Malaysia)
+        </a>
+      </li>
+      <li>
+        <a href="https://www.dvs.gov.my/dvs/resources/user_1/2021/BPSPV/Perangkaan/Perangkaan_Ternakan_2019_2020.xls" target="_blank" rel="noopener">
+          DVS Malaysia – Livestock Statistics 2019–2020
+        </a>
+      </li>
+      <li>
+        <a href="https://ourworldindata.org/grapher/per-capita-meat-type.zip?v=1&csvType=full&useColumnShortNames=false" target="_blank" rel="noopener">
+          Our World in Data – Global Per-Capita Meat Consumption Dataset
+        </a>
+      </li>
+      <li>
+        Sheets Extracted from above datasets:
+        <ul style="margin-top: 4px;">
+          <li><code>MALAY_PKAPITA</code> – Per-capita consumption (Malaysia)</li>
+          <li><code>MALAY_SARADIRI</code> – Self-sufficiency ratios (SSR%)</li>
+          <li><code>MALAY_PROD</code> / <code>MALAY_CONS</code> – Production & Consumption levels</li>
+          <li><code>LADANG_tahunan</code> – Livestock premise registrations</li>
+          <li><code>Harga Diladang_state</code> – Farm-gate prices by state (if used)</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+	</main>
+
+	<footer class="footer">
+		<p>Author: Shan Dissanayake · FIT3179 DV2 · Monash ID: 31098703</p>
+	</footer>
+
+	<script src="js/embed.js"></script>
+</body>
+
+</html>

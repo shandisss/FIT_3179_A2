@@ -47,7 +47,7 @@
     "fontSize": 18
   },
   "width": "container",
-  "height": 300,
+  "height": 460,
   "projection": {
     "type": "mercator"
    

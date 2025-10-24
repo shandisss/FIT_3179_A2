@@ -1,0 +1,156 @@
+:root {
+  --page-bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --text: #222;
+  --muted: #6B7280;
+  --border: #E5E7EB;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+
+  --meat-poultry: #2CA4A6;
+  --meat-beef: #3B82F6;
+  --meat-mutton: #F59E0B;
+  --meat-pork: #EF476F;
+
+  --font-body: 'Open Sans', sans-serif;
+
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text);
+  background: var(--page-bg);
+  line-height: 1.6;
+}
+
+/* Header */
+.hero {
+  padding: 38px var(--space-16) var(--space-32);
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.hero__tag {
+  font-size: 18px;
+  color: var(--muted);
+}
+
+/* Main Wrapper */
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-16) var(--space-48);
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: var(--space-32);
+  overflow: hidden;
+}
+
+.card.full {
+  padding: var(--space-24);
+}
+
+.card-body.grid {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: var(--space-24);
+  padding: var(--space-24);
+  align-items: start;
+}
+
+.card-body.grid.reverse {
+  grid-template-columns: minmax(0, 1fr) 360px;
+}
+
+/* Chart Container */
+.chart {
+  width: 100%;
+  min-height: 460px;
+}
+
+/* Aside / Text */
+.side {
+  font-size: 16px;
+  color: var(--text);
+}
+
+.side h2 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: var(--space-8);
+}
+
+.side p {
+  margin: 0 0 var(--space-12);
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  padding-bottom: var(--space-32);
+  margin-top: var(--space-48);
+}
+
+/* Vega-Lite embed */
+.vega-embed,
+.vega-embed > * {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* === Inline Vega control bindings (sliders, dropdowns) === */
+.vega-bindings {
+  display: flex !important;
+  flex-wrap: nowrap;
+  gap: var(--space-16); /* matches your spacing scale */
+  align-items: center;
+  margin-top: var(--space-16);
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.vega-bind {
+  margin: 0 !important;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.vega-bind label {
+  font-size: 14px;
+  color: var(--muted);
+  margin-right: 4px;
+  white-space: nowrap;
+}
+
+

@@ -1,10 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 380,
+  "height": 460,
   "autosize": { "resize": true },
   "title": {
-    "text": "Can We Feed Ourselves? Self-Sufficiency Ratio (SSR%)",
+    "text": "Self-Sufficiency Ratio (SSR%)",
     "subtitle": "Poultry ≈ self-sufficient; beef/mutton are consistently import-dependent.",
     "anchor": "start",
     "fontSize": 16,
@@ -19,7 +19,45 @@
     { "calculate": "toNumber(datum.value)", "as": "value_num" },
     { "calculate": "replace(datum.commodity, ' Meat', '')", "as": "meat_type" }
   ],
-  "layer": [
+  "layer": [{
+  "data": { "values": [ {} ] },
+  "mark": {
+    "type": "rect",
+    "fill": "white",
+    "opacity": 0.85,
+    "stroke": "#ccc",
+    "strokeWidth": 1,
+    "cornerRadius": 6
+  },
+  "encoding": {
+    "x": { "value": 360 },
+    "x2": { "value": 590 },
+    "y": { "value": 90 },
+    "y2": { "value": 170 }
+  }
+},
+{
+  "data": {
+    "values": [
+      {
+        "note": "2020 SSR% ranking:\nPoultry > 100% (fully self-sufficient),\nPork ≈ 92% (near self-sufficient),\nBeef & Mutton heavily import-reliant."
+      }
+    ]
+  },
+  "mark": {
+    "type": "text",
+    "align": "left",
+    "fontSize": 12,
+    "fontWeight": "normal",
+    "lineBreak": "\n",
+    "color": "#333"
+  },
+  "encoding": {
+    "x": { "value": 375 },
+    "y": { "value": 110 },
+    "text": { "field": "note" }
+  }
+},
     {
       "params": [
         {
@@ -33,7 +71,7 @@
         "x": {
           "field": "year",
           "type": "quantitative",
-          "axis": { "title": "Year", "tickMinStep": 1, "format": "d" }
+          "axis": { "title": "Year", "tickMinStep": 1, "format": "d" ,"grid": false}
         },
         "y": {
           "field": "value_num",
@@ -41,6 +79,7 @@
           "stack": null,
           "scale": { "domain": [0, 110] },
           "axis": { "title": "SSR (%)" }
+          
         },
         "color": {
           "field": "meat_type",

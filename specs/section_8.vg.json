@@ -8,7 +8,7 @@
     "subtitleFontSize": 12
   },
   "width": "container",
-  "height": 420,
+  "height": 500,
   "autosize": { "resize": true },
   "data": { "url": "https://raw.githubusercontent.com/shandisss/FIT_3179_A2/refs/heads/main/data/MALAY_IMPORT_EXPORT.csv" },
   "transform": [
@@ -19,12 +19,12 @@
   ],
   
   "encoding": {
-    "x": { "field": "year", "type": "ordinal", "axis": { "title": "Year" } },
+    "x": { "field": "year", "type": "ordinal", "axis": { "title": "Year" ,"labelAngle": 0  } },
     "color": {
       "field": "commodity",
       "type": "nominal",
       "title": "Commodity",
-      "legend": { "columns": 1 }
+      "legend": { "orient": "top", "direction": "horizontal","columns": 4 }
     },
     "tooltip": [
       { "field": "commodity", "type": "nominal", "title": "Commodity" },
@@ -43,7 +43,7 @@
           "type": "quantitative",
           "axis": { "title": "Import Quantity", "grid": true, "orient": "left" }
         },
-        "strokeDash": { "field": "Series", "type": "nominal", "legend": { "title": "" } },
+        "strokeDash": { "field": "Series", "type": "nominal", "legend": { "orient": "top", "direction": "horizontal", "title": "" ,"symbolOffset": -15} },
         "opacity": { "value": 0.9 }
       }
     },
@@ -63,7 +63,7 @@
   ],
   "resolve": { "scale": { "y": "independent" } },
   "config": {
-    "legend": { "titleFontSize": 12, "labelFontSize": 11 },
+    "legend": { "titleFontSize": 12, "labelFontSize": 11, "orient": "top", "direction": "horizontal" },
     "axis": { "labelFontSize": 11, "titleFontSize": 12 },
     "view": { "stroke": "transparent" }
   }
